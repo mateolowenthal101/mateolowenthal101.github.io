@@ -1,0 +1,62 @@
+<div class="grid-container">
+
+  <h1 class="mat-h1">Greetings {{name}}</h1>
+
+  <mat-grid-list cols="2" rowHeight="350px">
+
+    <mat-grid-tile colspan="2" rowspan="1">
+      <mat-card class="dashboard-card">
+
+
+        <mat-card-header>
+          <mat-card-title>
+            Weekly Phrase
+          
+          </mat-card-title>
+        </mat-card-header>
+
+
+        <mat-card-content class="dashboard-card-content">
+
+          <blockquote>
+            The man who comes back through the door in the wall will never be quite
+             the same as the man who went out. 
+
+            </blockquote>
+          <cite>Aldous Huxley</cite>
+
+        </mat-card-content>
+
+
+      </mat-card>
+
+    </mat-grid-tile>
+
+    <mat-grid-tile *ngFor="let card of cards | async" [colspan]="card.cols" [rowspan]="card.rows">
+      <mat-card class="dashboard-card">
+
+
+        <mat-card-header>
+          <mat-card-title>
+            {{card.title}}
+          
+          </mat-card-title>
+        </mat-card-header>
+
+
+        <mat-card-content class="dashboard-card-content">
+
+
+
+          <app-news [img]="card.content"></app-news>
+
+        </mat-card-content>
+
+
+      </mat-card>
+
+    </mat-grid-tile>
+
+  </mat-grid-list>
+
+</div>

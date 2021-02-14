@@ -1,0 +1,47 @@
+ 
+    {
+        "general_english": [
+            75,
+            70,
+            85,
+            81,
+            90
+        ],
+        "general_spanish": [
+            75,
+            70,
+            85,
+            81,
+            90
+        ],
+        "general_mathematics": [
+            75,
+            70,
+            85,
+            81,
+            90
+        ],
+        "english_scores": [
+            75,
+            70,
+            85,
+            81,
+            90
+        ],
+        "spanish_scores": [
+            75,
+            70,
+            85,
+            81,
+            90
+        ],
+        "mathematics_scores": [
+            75,
+            70,
+            85,
+            81,
+            90
+        ],
+        "date_init": "Monday, February 27st 2021",
+        "date_end": "Monday, march 2nd 2021"
+    }

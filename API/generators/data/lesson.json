@@ -1,0 +1,26 @@
+
+{
+ 
+    "title": "Sounds of the Consonants",
+    "description": "Let's learn about sounds of consonants",
+    "video_link": [
+        {
+            "title": "video 1",
+            "url": "https://www.youtube.com/watch?v=48Vf9G1cjyc"
+        },
+        {
+            "title": "video 2",
+            "url": "https://www.youtube.com/watch?v=mgycd2Y8Yeg"
+        }
+    ],
+    "exercises": [
+        {
+            "title": "exercise 1",
+            "url": "https://www.youtube.com/watch?v=48Vf9G1cjyc"
+        },
+        {
+            "title": "excersise 2",
+            "url": "https://www.youtube.com/watch?v=mgycd2Y8Yeg"
+        }
+    ]
+}

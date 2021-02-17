@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ReportService } from '../report.service';
+import * as report from "../../assets/db/reports.json";
 
 @Component({
   selector: 'app-report',
@@ -8,25 +8,15 @@ import { ReportService } from '../report.service';
 })
 export class ReportComponent implements OnInit {
 
-  reports;
+  reports = report.default;
   
-  constructor(private reportService: ReportService) { }
+  constructor() { }
 
 
   ngOnInit(): void {
 
-    this.Getinfo()
-    console.log(this.reports);
+
+  }
+
   
-
-  }
-
-  Getinfo() {
-    this.reportService.getReport().subscribe((data: []) => {
-      this.reports = data; 
-      console.log(data)
-    })
-
-  }
-
 }

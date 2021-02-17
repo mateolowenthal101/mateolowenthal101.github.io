@@ -1,24 +1,59 @@
-{
-      
-    "icon":"mathematics",
-    "title": "Pg 3-10",
-    "description": "complete the pages",
-    "solutions_links": [
-       
-        {
-        
-            "exercise_name": "Lesson 3",
-            "url": "https://www.youtube.com/watch?v=12nH5XR2N9I"
-        },
-        {
-         
-            "exercise_name": "Reddit",
-            "url": "https://www.youtube.com/watch?v=12nH5XR2N9I"
-        },
-        {
-       
-            "exercise_name": "lesson 4",
-            "url": "https://www.youtube.com/watch?v=bmuFH-xpA-U"
-        }
-    ]
-}
+[
+    {
+        "icon": "english",
+        "title": "English - Vowel sounds",
+        "description": "Solution exercises pages 10-16",
+        "solutions_links": [
+            {
+                "exercise_name": "Lesson 6",
+                "url": "https://youtu.be/cioJrblTcwc"
+            },
+            {
+                "exercise_name": "lesson 7",
+                "url": "https://youtu.be/T8RerQNwDuc"
+            }
+        ]
+    },
+    {
+        "icon": "mathematics",
+        "title": "Mathematics - Roman Numbers",
+        "description": "Solution exercises pages 10-16",
+        "solutions_links": [
+            
+            {
+                "exercise_name": "lesson 7",
+                "url": "https://youtu.be/T8RerQNwDuc"
+            }
+        ]
+    },
+    {
+        "icon": "spanish",
+        "title": "Spanish - Tildes",
+        "description": "Solution to exercises pages 10-16",
+        "solutions_links": [
+            {
+                "exercise_name": "Lesson 6",
+                "url": "https://youtu.be/cioJrblTcwc"
+            },
+            {
+                "exercise_name": "lesson 7",
+                "url": "https://youtu.be/T8RerQNwDuc"
+            },
+            {
+                "exercise_name": "lesson 7",
+                "url": "https://youtu.be/T8RerQNwDuc"
+            }
+        ]
+    },
+    {
+        "icon": "contabilidad",
+        "title": "Contabilidad - Libros contables",
+        "description": "Follow the exercise in the video.",
+        "solutions_links": [
+            {
+                "exercise_name": "Lesson 6",
+                "url": "https://youtu.be/cioJrblTcwc"
+            }
+        ]
+    }
+]

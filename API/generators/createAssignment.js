@@ -2,8 +2,14 @@ const axios = require('axios');
 const URL = require("./metadata").URL;
 let assignment_information = require("./data/assignments.json");
 
+for(let i = 0; i< assignment_information.length; i++){
 
-createAssignment(assignment_information);
+  createAssignment(assignment_information[i]);
+  console.log(i + "element added");
+
+}
+
+// createAssignment(assignment_information);
 
 
 async function createAssignment(information) {

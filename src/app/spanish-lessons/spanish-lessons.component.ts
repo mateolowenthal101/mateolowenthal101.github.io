@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { SpanishService } from '../spanish.service';
+import { Router, ActivatedRoute } from '@angular/router';
+import { LessonsService } from "../lessons.service";
+import * as spanishLessons  from "../../assets/db/spanish.json";
 
 @Component({
   selector: 'app-spanish-lessons',
@@ -9,24 +11,28 @@ import { SpanishService } from '../spanish.service';
 export class SpanishLessonsComponent implements OnInit {
 
 
-  courses;
+  courses = spanishLessons.default;
   
-  constructor(private spanish_data: SpanishService) { }
+  constructor(
+
+    private route: ActivatedRoute,
+    private router: Router,
+    private lesson_service: LessonsService
+
+  ) { }
 
   ngOnInit(): void {
 
-    this.Getinfo()
-    console.log(this.courses);
-  
 
   }
 
-  Getinfo() {
-    this.spanish_data.getSpanishCourse().subscribe((data: []) => {
-      this.courses = data; console.log(data)
-    })
 
+  loadLessons(lessons){
+    this.lesson_service.setLessons(lessons);
+    this.router.navigate(['/lessons']);
   }
+
+
  
 
 

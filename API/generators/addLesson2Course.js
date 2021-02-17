@@ -4,11 +4,11 @@ const URL = "http://localhost:3000";
 //------------------------------------------------------------
 
 // id of the course to add it. Take a look at excel sheet
-let course_id = "6028b563786ea98ba6dff377";
+let course_id = "602c8d8ee010aa5bf2ac7464";
 
 // id of the lesson that is going to be attached to a course. 
 // Take a look at excel sheet
-let lesson_id = "6027530985567f33fb609bf3";
+let lesson_id = "602c8e21e010aa5bf2ac7469";
 
 // Class to add lesson to 
 let type_course = ["english", "spanish", "mathematics"];

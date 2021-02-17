@@ -25,10 +25,11 @@ router.get("/getAssignments", (req,res) => {
 
     assignmentsModel.find({})
     .sort({'_id': -1})
-    .limit()
+    .limit(5)
     .exec(function(err, result) {
        if(err) err => console.log(err);
        res.json(result);
+
     });
 
 })

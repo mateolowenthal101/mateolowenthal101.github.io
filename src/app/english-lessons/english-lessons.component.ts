@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { EnglishService } from '../english.service';
+import * as englishLessons  from "../../assets/db/english.json";
+import { Router, ActivatedRoute } from '@angular/router';
+import { LessonsService } from "../lessons.service";
 
 @Component({
   selector: 'app-english-lessons',
@@ -8,24 +10,25 @@ import { EnglishService } from '../english.service';
 })
 export class EnglishLessonsComponent implements OnInit {
 
-  courses;
+  courses = englishLessons.default;
   
-  constructor(private english_data: EnglishService) { }
+  constructor(
+
+    private route: ActivatedRoute,
+    private router: Router,
+    private lesson_service: LessonsService
+
+  ) { }
 
   ngOnInit(): void {
 
-    this.Getinfo()
-    console.log(this.courses);
-  
-
+    
   }
 
-  Getinfo() {
-    this.english_data.getEnglishCourse().subscribe((data: []) => {
-      this.courses = data; console.log(data)
-    })
-
+  loadLessons(lessons){
+    this.lesson_service.setLessons(lessons);
+    this.router.navigate(['/lessons']);
   }
-  
+
 
 }

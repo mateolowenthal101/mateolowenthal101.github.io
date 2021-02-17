@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { AssignmentsService } from '../assignments.service';
+
+import * as assingment from "../../assets/db/assignments.json";
 
 @Component({
   selector: 'app-assignment-library',
@@ -8,9 +9,9 @@ import { AssignmentsService } from '../assignments.service';
 })
 export class AssignmentLibraryComponent implements OnInit {
 
-  assignments;
+  assignments = assingment.default;
 
-  constructor(private assignment_data: AssignmentsService) {
+  constructor() {
 
     
 
@@ -18,18 +19,9 @@ export class AssignmentLibraryComponent implements OnInit {
 
    ngOnInit(): void {
 
-    this.Getinfo()
-    console.log(this.assignments);
-  
 
   }
 
-  Getinfo() {
-    this.assignment_data.getAssignments().subscribe((data: []) => {
-      this.assignments = data; console.log(data)
-    })
-
-  }
   
 
 }

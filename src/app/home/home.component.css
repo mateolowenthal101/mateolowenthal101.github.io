@@ -19,6 +19,7 @@
 
 .dashboard-card-content {
   text-align: center;
+  height: auto;
 }
 
 
@@ -26,13 +27,26 @@
 blockquote {
 	font-weight: 100;
 	font-size: 2rem;
-	max-width: 600px;
+	max-width: 90%;
 	line-height: 1.4;
 	position: relative;
 	margin: 0;
   padding: .5rem;
  
 }
+
+@media only screen and (max-width: 800px) {
+	blockquote {
+		font-size: 1.6rem;
+	}
+  }
+
+
+@media only screen and (max-width: 600px) {
+	blockquote {
+		font-size: 1.3rem;
+	}
+  }
 
 blockquote:before,
 blockquote:after {

@@ -15,18 +15,26 @@ export class HomeComponent {
   cards = this.breakpointObserver.observe(Breakpoints.Handset).pipe(
     map(({ matches }) => {
       if (matches) {
+
+        
         return [
-          { title: 'Mathematics Cheatsheet', cols: 1, rows: 1, content: "../../assets/Math-cheat.png"},
-          { title: 'English Cheatsheet', cols: 1, rows: 1,content: "../../assets/English-cheat.jpeg" },
-          { title: 'Spanish Cheatsheet', cols: 1, rows: 1,content: "../../assets/Spanish-cheat.png" }
+          { title: 'Mathematics Cheatsheet', cols: 2, rows: 1, content: "../../assets/Math-cheat.png"},
+          { title: 'English Cheatsheet', cols: 2, rows: 1,content: "../../assets/English-cheat.jpeg" },
+          { title: 'Spanish Cheatsheet', cols: 2, rows: 1,content: "../../assets/Spanish-cheat.png" }
         ];
       }
+
+
+
 
       return [
         { title: 'Mathematics Cheatsheet', cols: 1, rows: 1,content: "../../assets/Math-cheat.png" },
         { title: 'English Cheatsheet', cols: 1, rows: 1,content: "../../assets/English-cheat.jpeg" },
         { title: 'Spanish Cheatsheet', cols: 1, rows: 1,content: "../../assets/Spanish-cheat.png" }
       ];
+
+
+
     })
   );
 

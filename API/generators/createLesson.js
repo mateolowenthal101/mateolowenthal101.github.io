@@ -7,7 +7,7 @@ createLesson(lesson_information);
 
 
 async function createLesson(information) {
-    let urlLessons = URL + "/lessons/";
+    let urlLessons = URL + "/lessons";
     try {
       const response = await axios.post(urlLessons, information);
       console.log(response.data);

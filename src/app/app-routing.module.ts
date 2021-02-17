@@ -8,12 +8,13 @@ import { LessonsComponent } from './lessons/lessons.component';
 
 
 
+
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
   { path: 'library', component: LibraryComponent },
   { path: 'report', component: ReportComponent },
   { path: 'games', component: GamesComponent },
-  { path: 'lessons/:topic/:course', component: LessonsComponent },
+  { path: 'lessons', component: LessonsComponent },
   { path: '',   redirectTo: '/home', pathMatch: 'full' }
 ];
 

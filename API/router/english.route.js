@@ -20,6 +20,29 @@ router.post("/", (req, res)=> {
 
 });
 
+
+
+// find the most recent
+router.put("/addLesson", (req, res)=> {
+    console.log(req.body);
+    let course_id = req.body.course;
+    let lesson_id = req.body.lesson;
+    
+    englishModel.findOneAndUpdate(
+        { _id: course_id }, 
+        { $push: { lessons: lesson_id } },
+      
+    )
+    .then((result) => {
+        res.send(result);
+    })
+    .catch((err) => {
+        console.log(err);
+    });
+    
+
+});
+
 router.get("/getAll", (req, res) => {
 
 
@@ -28,6 +51,7 @@ router.get("/getAll", (req, res) => {
     .exec()
     .then((result) => {
         res.send(result);
+
     })
     .catch(err => console.log(err))
 
@@ -45,6 +69,7 @@ router.get("/getLessons/:id", (req, res) => {
     .exec()
     .then((result) => {
         res.send(result);
+        console.log("scully was here");
     })
     .catch(err => console.log(err))
 

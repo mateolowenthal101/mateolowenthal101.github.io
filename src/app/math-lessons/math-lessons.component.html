@@ -11,7 +11,7 @@
       </p>
     </mat-card-content>
     <mat-card-actions>
-        <a mat-raised-button [routerLink]="['/lessons', 'mathematics', course._id]">
+        <a mat-raised-button (click)="loadLessons(course.lessons)">
           Go to Course
         </a>
 

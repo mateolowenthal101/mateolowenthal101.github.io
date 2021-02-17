@@ -1,6 +1,6 @@
 
 
-<div *ngFor="let lesson of lessons_obj.lessons" class="responsive-card">
+<div *ngFor="let lesson of lessons_obj" class="responsive-card">
 
 
     <mat-card class="example-card">
@@ -24,16 +24,14 @@
         <mat-card-actions>
           
           <a *ngFor="let video of lesson.video_link" 
-          mat-button
-          mat-button color="primary"
+          mat-raised-button color="primary"
           target="_blank"
           href="{{video.url}}">
             {{video.title}}
         </a>
        
         <a *ngFor="let exercise of lesson.exercises" 
-          mat-button
-          mat-button color="accent"
+          mat-raised-button color="accent"
           target="_blank"
           href="{{exercise.url}}">
             {{exercise.title}}

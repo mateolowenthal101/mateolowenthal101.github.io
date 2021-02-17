@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { MathematicsService } from '../mathematics.service';
+import { Router, ActivatedRoute } from '@angular/router';
+import { LessonsService } from "../lessons.service";
+import * as mathematicsLessons  from "../../assets/db/mathematics.json";
 
 @Component({
   selector: 'app-math-lessons',
@@ -9,22 +11,26 @@ import { MathematicsService } from '../mathematics.service';
 export class MathLessonsComponent implements OnInit {
 
 
-  courses;
+  courses = mathematicsLessons.default;
   
-  constructor(private math_data: MathematicsService) { }
+  constructor(
+
+    private route: ActivatedRoute,
+    private router: Router,
+    private lesson_service: LessonsService
+
+  ) { }
 
   ngOnInit(): void {
 
-    this.Getinfo()
-    console.log(this.courses);
   
-
   }
 
-  Getinfo() {
-    this.math_data.getMathCourse().subscribe((data: []) => {
-      this.courses = data; console.log(data)
-    })
-
+  loadLessons(lessons){
+    this.lesson_service.setLessons(lessons);
+    this.router.navigate(['/lessons']);
   }
+
+
+
 }
